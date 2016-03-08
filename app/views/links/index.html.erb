@@ -1,0 +1,27 @@
+<h1>All Links</h1>
+
+<p>
+	<%= link_to "Add a link", new_link_path, class: "btn btn-primary" %>	
+</p>
+
+<table class="table">
+	<thead>
+		<th>Title</th>
+		<th>Action</th>
+	</thead>
+
+	<tbody>
+		<% @links.each do |link| %>
+			<tr>
+				<td>		
+				  <%= link_to link.title, link_path(link) %>
+				</td>
+				<td>
+					<%= link_to "Show", link %>
+					<%= link_to "Edit", edit_link_path(link) %>
+					<%= link_to "Delete", link, method: :delete, data: { confirm: "Are your sure?"} %>
+				</td>
+			</tr>			
+		<% end %>	
+	</tbody>
+</table>

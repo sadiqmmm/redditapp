@@ -20,3 +20,4 @@ group :development do
 end
 
 gem  'puma'
+gem 'bootstrap-sass', '~> 3.3.6'
